@@ -47,7 +47,8 @@ void led_Sequential(unsigned short count)
     PORTB = 0x00; 
     for(unsigned short i = 0; i < 16; ++i)
     {
-      i == count ? PORTB = 0x08 : PORTB = 0x00;
+      i == count ? PORTB = 0x08 : PORTB = 0x00; //DS
+      //delay(10);
       PORTB = 0x20;
       PORTB = 0x00;
     }
